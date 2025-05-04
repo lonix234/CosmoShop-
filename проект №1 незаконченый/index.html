@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>CosmoShop — Маркетплейс косметики</title>
+  <link rel="stylesheet" href="style (2).css">
+</head>
+<body>
+  <header>
+    <h1>CosmoShop</h1>
+    <input type="text" id="searchInput" placeholder="Поиск...">
+    <select id="categoryFilter">
+      <option value="all">Все категории</option>
+      <option value="skincare">Уход за кожей</option>
+      <option value="makeup">Макияж</option>
+      <option value="hair">Уход за волосами</option>
+    </select>
+    <button onclick="showCart()">🛒 Корзина (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <main id="productList"></main>
+
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="hideCart()">&times;</span>
+      <h2>Ваша корзина</h2>
+      <ul id="cartItems"></ul>
+      <p>Итого: <span id="totalPrice">0₽</span></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
